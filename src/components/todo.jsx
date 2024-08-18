@@ -83,7 +83,7 @@ function Todo() {
                     type="text"
                     value={editText}
                     onChange={handleEditChange}
-                    className="edit text"
+                    className="edit edit-item-input"
                   />
                   <button onClick={() => saveEdit(index)} className="savebutton">Save</button>
                 </>

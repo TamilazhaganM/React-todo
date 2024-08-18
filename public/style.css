@@ -12,9 +12,9 @@ body {
 input[type="text"] {
   color: rgb(105, 101, 101);
   padding: 10px;
+  font-size: 5rem;
   outline: none;
   border: none;
-  border-bottom: solid;
   border-radius: 15px;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -139,4 +139,14 @@ ol {
   border: none;
   border-radius: 5px;
   margin-left: 5px;
+}
+.editing{
+  color: red;
+  
+}
+.edit-item-input {
+  width: 250px;
+  max-width: 100%;
+  padding: 8px;
+  background-color:transparent;
 }
