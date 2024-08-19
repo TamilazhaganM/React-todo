@@ -141,20 +141,23 @@ ol {
   color: red;
   
 }
-/* .edit-item-input {
-  max-width: 85%;
-  margin: 10px ;
-  justify-content: center;
-  background-color:transparent;
-  border-bottom: solid 3px;
-} */
 .edit {
   display: flex;
   align-items: center;
-    margin: 0px 10px;
+  margin: 0px 10px;
   max-width: 85%;
   border: none;
   background: transparent;
   border-bottom: solid;
+}
+.notes{
+  font-size:xx-large;
+  padding: 0px;
+  border: none;
+  color:rgb(196, 133, 15);
+  padding: 20px;
+  position: fixed;
+  bottom:0;
+  right: 0;
 }
 

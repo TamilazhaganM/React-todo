@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMessage} from '@fortawesome/free-solid-svg-icons';
 
 function Todo() {
   const [items, setItems] = useState([{ text: "Go to gym", completed: false }]);
@@ -98,6 +100,7 @@ function Todo() {
               <button onClick={() => deleteItem(index)} className="deletebutton">
                 Delete
               </button>
+              <FontAwesomeIcon className="notes" icon={faMessage} />
             </li>
           ))}
         </ol>
