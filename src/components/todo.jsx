@@ -64,7 +64,7 @@ function Todo() {
     <div>
       <div className="todo-container">
         <h1>Task List</h1>
-        <input type="text" onChange={handleList} value={newItem}></input>
+        <input type="text"  className="inputbox" onChange={handleList} value={newItem}></input>
         <button className="addbutton" onClick={addItem}>ADD</button>
         <ol>
           {items.map((item, index) => (
@@ -83,7 +83,7 @@ function Todo() {
                     type="text"
                     value={editText}
                     onChange={handleEditChange}
-                    className="edit edit-item-input"
+                    className="edit edit-item-input inputbox"
                   />
                   <button onClick={() => saveEdit(index)} className="savebutton">Save</button>
                 </>
