@@ -100,10 +100,11 @@ function Todo() {
               <button onClick={() => deleteItem(index)} className="deletebutton">
                 Delete
               </button>
-              <FontAwesomeIcon className="notes" icon={faMessage} />
             </li>
           ))}
         </ol>
+        <FontAwesomeIcon className="notes" icon={faMessage} />
+
       </div>
     </div>
   );
