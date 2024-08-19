@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMessage} from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router-dom";
 
 function Todo() {
   const [items, setItems] = useState([{ text: "Go to gym", completed: false }]);
   const [newItem, setNewItem] = useState("");
   const [editIndex, setEditIndex] = useState(null);
   const [editText, setEditText] = useState("");
+  const navigate =useNavigate()
 
   function handleList(e) {
     setNewItem(e.target.value);
@@ -39,6 +41,10 @@ function Todo() {
       return item;
     });
     setItems(updatedItems);
+  }
+
+  function handleMessageIcon(){
+    navigate('/Sticky-Notes')
   }
 
   function startEditing(index) {
@@ -103,7 +109,8 @@ function Todo() {
             </li>
           ))}
         </ol>
-        <FontAwesomeIcon className="notes" icon={faMessage} />
+     
+        <FontAwesomeIcon className="notes" onClick={handleMessageIcon} icon={faMessage} />
 
       </div>
     </div>

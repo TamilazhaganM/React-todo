@@ -1,0 +1,13 @@
+
+body{
+    margin: 0%;
+}
+.notes-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    background-color: #DC6B19;
+    margin: 0;
+    padding: 0;
+}
