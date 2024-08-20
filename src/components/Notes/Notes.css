@@ -76,3 +76,25 @@
 .popup-box textarea:focus{
  outline: none; 
 }
+@media (max-width: 658px) {
+    .container {
+        padding: 10px;
+        text-align: center;
+    }
+    .note-container {
+        width: 80%;
+        margin: 20px;
+    }
+    .popup-box{
+        background-color: #F3B664;
+        width: 50%;
+        padding: 30px;
+        position: absolute;
+        top:20%;
+        left:20%;
+        z-index: 2;
+        border-radius: 20px;
+        display: none;
+    }
+    /* Add more responsive styles as needed */
+}
