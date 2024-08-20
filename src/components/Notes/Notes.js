@@ -1,18 +1,49 @@
-import React from 'react'
+import React from "react";
 import "./Notes.css";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Notes = () => {
-  return (
-    <div >
-        <div className='notes-box'>
-        <div className='notes-container'>
-        <input type='text' className='notetitle' placeholder='Title'></input>
-            <textarea className='notemessage' placeholder='Place Your message....' rows={5}></textarea>
-                    </div>
-        </div>
-      
-    </div>
-  )
-}
+   
+   function handlePlusicon(){
+    const popupdiplay =document.getElementById("popupp-overlay")
+    const popupbox=document.getElementById("popupp-box")
+    popupdiplay.style.display="block"
+    popupbox.style.display="block"
 
-export default Notes
+   }
+
+
+  return (
+    <div className="notes-box">
+      <div className="notes-container">
+        <h1>Hello world</h1>
+        <p>
+          Get set up and learn how to use icons in your projects, awesomely.
+          We've got set-up guides for those just getting started, styling guides
+          to add some flair, and deeper dives for fine-tuning Font Awesome to
+          suit your needs.
+        </p>
+      </div>
+      <FontAwesomeIcon className="plusicon" onClick={handlePlusicon} icon={faPlus} />
+      <div class="popup-overlay" id="popupp-overlay"></div>
+      <div class="popup-box" id="popupp-box">
+        <h2>Add notes</h2>
+        <form action="">
+          <input type="text" placeholder="Notes" id="note-title"></input>
+          <textarea
+            name=""
+            id="note-description"
+            placeholder="Notes Description"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button id="add">Add</button>
+          <button id="cancel"> Cancel</button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Notes;

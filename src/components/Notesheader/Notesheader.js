@@ -9,6 +9,7 @@ const Notesheaders = () => {
         <h1>Sticky Notes</h1>
         </div>
         <Notes />
+
     </div>
   )
 }
