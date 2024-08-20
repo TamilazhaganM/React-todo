@@ -1,9 +1,13 @@
 import React from "react";
 import "./Notes.css";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faListUl, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 const Notes = () => {
+
+  const navigate = useNavigate()
+
    
    function handlePlusicon(){
     const popupdiplay =document.getElementById("popupp-overlay")
@@ -11,6 +15,9 @@ const Notes = () => {
     popupdiplay.style.display="block"
     popupbox.style.display="block"
 
+   }
+   function handleListIcon(){
+    navigate("/")
    }
 
 
@@ -26,6 +33,8 @@ const Notes = () => {
         </p>
       </div>
       <FontAwesomeIcon className="plusicon" onClick={handlePlusicon} icon={faPlus} />
+      <FontAwesomeIcon className="listicon" onClick={handleListIcon} icon={faListUl} />
+
       <div class="popup-overlay" id="popupp-overlay"></div>
       <div class="popup-box" id="popupp-box">
         <h2>Add notes</h2>

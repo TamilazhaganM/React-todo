@@ -25,6 +25,18 @@
     padding: 10px; 
     background-color:#F4DFB6;
 } */
+.listicon{
+    font-size:xx-large;
+    padding: 0px;
+    border: none;
+    background-color: #C6A969;
+    color:#597E52;
+    padding: 10px;
+    border-radius: 100%;
+    position: fixed;
+    bottom:20px;
+    left: 20px;
+  }
 .popup-overlay{
     background-color: black;
     opacity: 0.8;
