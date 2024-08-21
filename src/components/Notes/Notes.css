@@ -18,12 +18,19 @@
 }
 .notes-container h1{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .notes-container p {
   word-wrap: break-word;
   white-space: normal;
+  font-size: 1rem;
+  font-weight:500;
+  color: rgb(87, 85, 85);
+  text-align:justify ;
+}
+.notes-buttons{
+  margin: 8px auto;
 }
 .Editbtn {
   border: none;

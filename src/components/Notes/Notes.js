@@ -89,7 +89,7 @@ const Notes = () => {
         <div className="notes-container" key={index}>
           <h1>{note.title}</h1>
           <p>{note.message}</p>
-          <div>
+          <div className="notes-buttons">
             <FontAwesomeIcon
               className="Editbtn"
               onClick={() => handleEditbtn(index)}
