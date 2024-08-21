@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMessage} from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faMessage, faPenToSquare, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
 
 function Todo() {
@@ -93,19 +93,31 @@ function Todo() {
                     onChange={handleEditChange}
                     className="edit edit-item-input inputbox"
                   />
-                  <button onClick={() => saveEdit(index)} className="savebutton">Save</button>
+                   <FontAwesomeIcon
+              className="savebutton"
+              onClick={() => saveEdit(index)}
+              icon={faCheck}
+            />
+      
                 </>
               ) : (
                 <>
                   <span className={`text ${item.completed ? "linetext" : ""}`}>
                     {item.text}
                   </span>
-                  <button onClick={() => startEditing(index)} className="editbutton ">Edit</button>
+                  <FontAwesomeIcon
+              className="editbutton"
+              onClick={() => startEditing(index)}
+              icon={faPenToSquare}
+            />
                 </>
               )}
-              <button onClick={() => deleteItem(index)} className="deletebutton">
-                Delete
-              </button>
+              <FontAwesomeIcon
+              className="deletebutton"
+              onClick={() => deleteItem(index)}
+              icon={faTrash}
+            />
+    
             </li>
           ))}
         </ol>
