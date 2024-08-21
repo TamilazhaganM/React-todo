@@ -60,10 +60,10 @@
   opacity: 0.8;
   height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1000;
   display: none;
 }
 .popup-box {
@@ -72,8 +72,8 @@
   padding: 30px;
   position: absolute;
   top: 20%;
-  left: 40%;
-  z-index: 2;
+  left: 37%;
+  z-index:1001;
   border-radius: 20px;
   display: none;
 }
@@ -122,9 +122,23 @@
     position: absolute;
     top: 20%;
     left: 20%;
-    z-index: 2;
+    z-index: 10002;
     border-radius: 20px;
     display: none;
+  }
+  .popup-overlay {
+    background-color: black;
+    opacity: 0.8;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10001;
+  }
+  .notes-container{
+    margin: 10px auto;
   }
   /* Add more responsive styles as needed */
 }

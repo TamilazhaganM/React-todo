@@ -4,7 +4,7 @@ import { faCheck, faMessage, faPenToSquare, faTrash} from '@fortawesome/free-sol
 import { useNavigate } from "react-router-dom";
 
 function Todo() {
-  const [items, setItems] = useState([{ text: "Go to gym", completed: false }]);
+  const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [editIndex, setEditIndex] = useState(null);
   const [editText, setEditText] = useState("");
