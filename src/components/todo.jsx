@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faMessage, faPenToSquare, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,17 @@ function Todo() {
   const [editIndex, setEditIndex] = useState(null);
   const [editText, setEditText] = useState("");
   const navigate =useNavigate()
+
+
+  useEffect(()=>{
+  const savedItems=localStorage.getItem("todoItems")
+  if(savedItems){
+    setItems(JSON.parse(savedItems))
+  }
+  },[])
+   useEffect(()=>{
+    localStorage.setItem("todoItems",JSON.stringify(items))
+   },[items])
 
   function handleList(e) {
     setNewItem(e.target.value);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Notes.css";
 import { faListUl, faPenToSquare, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,18 @@ const Notes = () => {
   const [notes, setNotes] = useState([]);
   const [editIndex, setEditIndex] = useState(null); // New state to track the note being edited
   const navigate = useNavigate();
+
+
+  useEffect(()=>{
+    const savenotes=localStorage.getItem("notesitem")
+    if(savenotes){
+      setNotes(JSON.parse(savenotes))
+    }
+  },[])
+
+  useEffect(()=>{
+    localStorage.setItem("notesitem",JSON.stringify(notes))
+  })
 
   function handletitle(e) {
     const titlevalue = e.target.value;
